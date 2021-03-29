@@ -1,0 +1,24 @@
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+    margin-top: 200px;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+  
+  .button-login{
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 20px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .button-register{
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
