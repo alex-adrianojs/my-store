@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/template/header/header.component';
+import { FormsModule } from '@angular/forms';
+// import { FormControl, Validators} from '@angular/forms';
+
+
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule} from '@angular/material/list';
@@ -20,17 +24,23 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
+import { LoginComponent } from './components/login/login.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    // FormControl,
+    // Validators,
     MatSidenavModule,  	 
     MatListModule,		
     MatCardModule,		
