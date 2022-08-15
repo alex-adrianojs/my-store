@@ -1,23 +1,37 @@
 <mat-card>
     <mat-card-content>
         <form>
-            <h2>LONG IN </h2>
+            <h2>Login</h2>
             <!-- <mat-error *ngIf="!loginValid">
                 The username and password were not recognized
             </mat-error> -->
-            <mat-form-field>
-                <input matInput placeholder="Email" required>
-                <!-- <mat-erro>
-                    Please provide a valid email addres
-                </mat-erro> -->
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput type="password" placeholder="Password"> 
+            <mat-form-field appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input matInput placeholder="@" required>
                 <!-- <mat-error>
-                    Please provide a valid password
+                    Please provide a valid email addres
                 </mat-error> -->
             </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field >
             <button mat-raised-button color="primary">Login</button>
+            <button mat-stroked-button color="primary" routerLink="/customer/create">Register</button>
+            <br>
+            <button mat-button color="basic">I forgot my login</button>
+            <button mat-button color="basic" routerLink="/customer/create">I forgot my password</button>
+        
+            <mat-divider></mat-divider>
+
+            <div class="loginOptions">
+            <button mat-stroked-button color="primary">Login with <b>Facebook</b></button>
+            <button mat-stroked-button color="warn" routerLink="/customer/create">Login with <b>Google</b></button>
+            </div>    
+
         </form>
     </mat-card-content>
 </mat-card>

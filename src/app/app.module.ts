@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/template/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 // import { FormControl, Validators} from '@angular/forms';
 
 
@@ -25,6 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
 import { LoginComponent } from './components/login/login.component';
+import { CustomerCreateComponent } from './components/customer/customer-create/customer-create.component';
+import { CustomerReadComponent } from './components/customer/customer-read/customer-read.component';
 
 
 
@@ -32,7 +35,9 @@ import { LoginComponent } from './components/login/login.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    CustomerCreateComponent,
+    CustomerReadComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,8 @@ import { LoginComponent } from './components/login/login.component';
     MatPaginatorModule, 
     MatSortModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

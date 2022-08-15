@@ -8,8 +8,5 @@ mat-card {
     display: block;
   }
   button{
-      margin: 15px;
-  }
-  .loginOptions{
-      margin-top: 20px;;
+      margin: 10px;
   }
